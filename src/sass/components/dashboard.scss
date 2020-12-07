@@ -1,0 +1,64 @@
+.angled-div {
+  position: absolute;
+  top: -10%;
+  height: 850px;
+  width: 100%;
+  background: linear-gradient(210deg, rgba(134,154,221,1) 44%, rgba(115,108,217,1) 69%, rgba(95,103,216,1) 76%, rgba(92,52,212,1) 100%);
+  transform: skewY(-10deg);
+  transform-origin: 0;
+  z-index: 0;
+}
+
+.dashboard-features-wrapper {
+  position: absolute;
+  bottom: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-style: solid;
+}
+
+.dashboard-content-wrapper {
+  height: 200px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  background-color: #fff;
+  box-shadow: 2px 1px 1px 2px rgba(purple, 0.05);
+  border-radius: 7px;
+}
+
+.dashboard-content-header {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboard-content-description {
+  height: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.dashboard-content-icon {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

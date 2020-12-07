@@ -1,13 +1,18 @@
 import React from 'react';
-import AppShell from './components/app-shell'
+import Dashboard from './views/Dashboard'
+import Membership from './views/Membership'
+import Schedule from './views/Schedule'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
 import './sass/main.scss';
 
 function App() {
   return (
-    <AppShell>
-      
-    </AppShell>
+    <Router>
+      <Route exact path="/" component={Dashboard} />
+      <Route path="/schedule" component={Schedule} />
+      <Route path="/membership" component={Membership} />
+    </Router>
   );
 }
 
