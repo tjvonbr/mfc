@@ -1,16 +1,32 @@
 import React from 'react'
-import { FaDumbbell } from 'react-icons/fa'
+import { FaDumbbell, FaRunning } from 'react-icons/fa'
+import { IoLogoDribbble } from 'react-icons/io5'
 
-const DashboardContainer: React.FC = () => {
+export interface Props {
+  name: string,
+  description: string
+}
+
+const DashboardContainer: React.FC<Props> = (props) => {
+
   return (
     <div className="dashboard-content-wrapper">
-      <h3 className="dashboard-content-header">Sports Xcel</h3>
+      <h3 className="dashboard-content-header">{props.name}</h3>
       <p className="dashboard-content-description">
-        Designed for athletes seeking specific training to perform
-        better in their sport
+        {props.description}
       </p>
       <div className="dashboard-content-icon">
-        <FaDumbbell  size={25}/>
+        {(() => {
+          switch (props.name) {
+            case "Women's Bootcamp": 
+              return <FaRunning size={25} />  
+            case "CrossFit": 
+              return <FaDumbbell size={25} color='black' />
+            case "Sports Xcel":
+              return <IoLogoDribbble size={25} />
+            default: return
+          }
+        })()}
       </div>
     </div>
   )
